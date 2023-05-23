@@ -22,9 +22,7 @@ public class TicTacToe {
         WholeBoard[2][0] = "2";
         WholeBoard[3][0] = "3";
         for (int i = 0; i < 3; i++) {
-            for (int j = 0; j < 3; j++) {
-                WholeBoard[i + 1][j + 1] = board[i][j];
-            }
+            System.arraycopy(board[i], 0, WholeBoard[i + 1], 1, 3);
         }
         for (int i = 0; i < 4; i++) {
             for (int j = 0; j < 4; j++) {
